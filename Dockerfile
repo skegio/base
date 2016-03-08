@@ -14,5 +14,7 @@ ENV TZ /usr/share/zoneinfo/America/Los_Angeles
 
 EXPOSE 22
 
+LABEL org.endot.dockdev.basetype="ubuntu"
+
 RUN mkdir /var/run/sshd
 CMD ["/usr/sbin/sshd", "-D"]
