@@ -1,3 +1,3 @@
 # Base docker image
 
-See <https://github.com/justone/ddc-go>
+See <https://github.com/skegio/skeg>
