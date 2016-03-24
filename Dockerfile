@@ -10,7 +10,6 @@ ENV LC_ALL en_US.utf8
 
 # Ensure that color and time zone are correct
 ENV TERM xterm-256color
-ENV TZ /usr/share/zoneinfo/America/Los_Angeles
 
 EXPOSE 22
 
