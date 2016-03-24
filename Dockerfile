@@ -1,4 +1,4 @@
-FROM ubuntu:14.04
+FROM ubuntu:16.04
 MAINTAINER Nate Jones <nate@endot.org>
 
 ENV DEBIAN_FRONTEND noninteractive
@@ -13,7 +13,7 @@ ENV TERM xterm-256color
 
 EXPOSE 22
 
-LABEL org.endot.dockdev.basetype="ubuntu"
+LABEL skeg.io/image/basetype="ubuntu"
 
 RUN mkdir /var/run/sshd
 CMD ["/usr/sbin/sshd", "-D"]
