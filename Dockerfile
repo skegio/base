@@ -2,6 +2,10 @@ FROM ubuntu:16.04
 MAINTAINER Nate Jones <nate@endot.org>
 
 ENV DEBIAN_FRONTEND noninteractive
+RUN apt-get update && \
+    apt-get install -y software-properties-common && \
+    add-apt-repository ppa:git-core/ppa
+
 RUN apt-get update && apt-get install -y \
     vim-nox locales sudo tmux git openssh-server curl \
     tree less aptitude man wget unzip
