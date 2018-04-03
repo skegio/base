@@ -8,7 +8,7 @@ RUN apt-get update && \
 
 RUN apt-get update && apt-get install -y \
     vim-nox locales sudo tmux git openssh-server curl \
-    tree less aptitude man wget unzip
+    tree less aptitude man wget unzip rsync
 
 # Set up UTF-8
 RUN echo "en_US.UTF-8 UTF-8" > /etc/locale.gen && locale-gen en_US.UTF-8
