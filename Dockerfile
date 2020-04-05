@@ -1,6 +1,10 @@
 FROM ubuntu:18.04
 MAINTAINER Nate Jones <nate@endot.org>
 
+RUN cat `which unminimize` | sed -e '/Would you like to continue/,+5d' | sed 's/apt-get upgrade/apt-get upgrade -y/g' > /root/unminimize && \
+    sh /root/unminimize && \
+    rm /root/unminimize
+
 ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update && \
     apt-get install -y software-properties-common && \
